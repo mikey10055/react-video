@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import './VideoPlayer.css';
 
+import video from './_testData/video1.mp4';
+
 class VideoPlayer extends Component {
     constructor(props) {
         super(props);
@@ -21,14 +23,18 @@ class VideoPlayer extends Component {
 
     render() {
         return (
-            <video src={this.props.src}></video>
+            <div className="videoPlayer">
+                <video ref="videoElement" src={video} controls={this.props.controls} autoPlay={this.props.autoplay}></video>
+            </div>
         );
     }
 }
 
 VideoPlayer.defaultProps = {
     env: 'local',
-    src: ''
+    src: '_testData/video1.mp4',
+    autoplay: 'true',
+    controls: 'true'
 }
 
 export default VideoPlayer;

@@ -12,6 +12,10 @@
 # components
 /src/components/*
 
+_testData/*
+_test*
+_test*.*
+
 # misc
 .DS_Store
 .env.local
